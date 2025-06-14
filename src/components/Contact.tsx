@@ -37,10 +37,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'service_do8v4pp', // Replace with your service ID
-        'template_9tbdk38', // Replace with your template ID
+        'SERVICE_ID', // Replace with your service ID
+        'TEMPLATE_ID', // Replace with your template ID
         templateParams,
-        '0AZ3jAGdjHOyKyej8' // Replace with your user ID
+        'PUBLIC_ID' // Replace with your user ID
       );
 
       setSubmitStatus('success');
