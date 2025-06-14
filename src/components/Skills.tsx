@@ -91,7 +91,7 @@ const Skills = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              'Google Developer Certified',
+              'Endpoint Security Certified',
               'Flutter Development Expert',
               'Android Architecture Expert',
               'Python Programming Expert'

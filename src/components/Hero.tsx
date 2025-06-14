@@ -29,6 +29,13 @@ const Hero = () => {
     }
   };
 
+  const handleGetInTouch = () => {
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       {/* Enhanced animated background elements with glow */}
@@ -101,7 +108,10 @@ const Hero = () => {
           <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-500 ${
             isTypingComplete ? 'animate-fade-in-up opacity-100' : 'opacity-0'
           }`} style={{ animationDelay: '1000ms' }}>
-            <button className="group bg-gradient-to-r from-blue-600 to-teal-600 dark:from-blue-500 dark:to-teal-500 text-white px-8 py-3 rounded-full font-medium shadow-lg shadow-blue-500/30 dark:shadow-blue-400/30 hover:shadow-xl hover:shadow-blue-500/50 dark:hover:shadow-blue-400/50 transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 animate-glow-pulse">
+            <button 
+              onClick={handleGetInTouch}
+              className="group bg-gradient-to-r from-blue-600 to-teal-600 dark:from-blue-500 dark:to-teal-500 text-white px-8 py-3 rounded-full font-medium shadow-lg shadow-blue-500/30 dark:shadow-blue-400/30 hover:shadow-xl hover:shadow-blue-500/50 dark:hover:shadow-blue-400/50 transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 animate-glow-pulse"
+            >
               <Mail size={20} className="group-hover:animate-bounce" />
               Get In Touch
             </button>
