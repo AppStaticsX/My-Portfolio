@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from "@emailjs/browser";
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Facebook, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +85,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/in/anushka-umayanga', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/AppStaticsX', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Facebook, href: '#', label: 'Twitter' },
   ];
 
   return (
@@ -142,7 +142,7 @@ const Contact = () => {
             {/* Social Links */}
             <div className="animate-fade-in animation-delay-500">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Me
+                Follow Me on Social Media
               </h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (

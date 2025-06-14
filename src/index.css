@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 /* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation));
+  }
+  50% {
+    transform: translateY(-20px) rotate(var(--rotation));
+  }
+}
+
 @keyframes slideIn {
   from {
     width: 0%;
@@ -95,6 +104,10 @@
 }
 
 /* Animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
@@ -136,6 +149,47 @@
   animation: typing-cursor 1s infinite;
 }
 
+/* Transform rotation utilities */
+.rotate-12 {
+  --rotation: 12deg;
+  transform: rotate(12deg);
+}
+
+.rotate-15 {
+  --rotation: 15deg;
+  transform: rotate(15deg);
+}
+
+.rotate-30 {
+  --rotation: 30deg;
+  transform: rotate(30deg);
+}
+
+.rotate-45 {
+  --rotation: 45deg;
+  transform: rotate(45deg);
+}
+
+.rotate-60 {
+  --rotation: 60deg;
+  transform: rotate(60deg);
+}
+
+.-rotate-12 {
+  --rotation: -12deg;
+  transform: rotate(-12deg);
+}
+
+.-rotate-30 {
+  --rotation: -30deg;
+  transform: rotate(-30deg);
+}
+
+.-rotate-45 {
+  --rotation: -45deg;
+  transform: rotate(-45deg);
+}
+
 /* Animation delays */
 .animation-delay-200 {
   animation-delay: 200ms;
@@ -161,12 +215,28 @@
   animation-delay: 1000ms;
 }
 
+.animation-delay-1500 {
+  animation-delay: 1500ms;
+}
+
+.animation-delay-1800 {
+  animation-delay: 1800ms;
+}
+
 .animation-delay-2000 {
   animation-delay: 2000ms;
 }
 
+.animation-delay-2500 {
+  animation-delay: 2500ms;
+}
+
 .animation-delay-3000 {
   animation-delay: 3000ms;
+}
+
+.animation-delay-3500 {
+  animation-delay: 3500ms;
 }
 
 .animation-delay-4000 {
